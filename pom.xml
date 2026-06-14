@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.zeeesea</groupId>
-    <artifactId>GameEngine</artifactId>
-    <version>v1.4</version>
+    <artifactId>NeuralNetwork</artifactId>
+    <version>v1</version>
 
     <name>NeuralNetwork</name>
     <description>A simple Neural Network for Java</description>
