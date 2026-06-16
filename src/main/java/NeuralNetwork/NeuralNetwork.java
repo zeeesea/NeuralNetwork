@@ -53,7 +53,7 @@ public class NeuralNetwork {
         return lastOutput = layers[layers.length - 1].activations;
     }
 
-    public void backPropagation(double[] expected) {
+    public void backPropagation (double[] expected) {
         int l = layers.length;
         for (int i = 0; i < layers[l - 1].size; i++) {
             layers[l - 1].deltas[i] = (layers[l - 1].activations[i] - expected[i]) * sigmoidDerivative(layers[l - 1].activations[i]);
@@ -71,7 +71,7 @@ public class NeuralNetwork {
         updateWeightsAndBiases();
     }
 
-    private void updateWeightsAndBiases() {
+    private void updateWeightsAndBiases () {
         for (int i = 1; i < layers.length; i++) {
             for (int j = 0; j < layers[i].size; j++) {
                 layers[i].biases[j] -= eta * layers[i].deltas[j];
@@ -142,11 +142,11 @@ public class NeuralNetwork {
         return product;
     }
 
-    public double[][] getWeightsForLayer(int layerIndex) {
+    public double[][] getWeightsForLayer (int layerIndex) {
         if (layerIndex < 0 || layerIndex >= layers.length) return null;
         return layers[layerIndex].weights;
     }
-    public double[] getActivationsForLayer(int layerIndex) {
+    public double[] getActivationsForLayer (int layerIndex) {
         if (layerIndex < 0 || layerIndex >= layers.length) return null;
         return layers[layerIndex].activations;
     }
