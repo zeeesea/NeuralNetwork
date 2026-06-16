@@ -141,4 +141,13 @@ public class NeuralNetwork {
         }
         return product;
     }
+
+    public double[][] getWeightsForLayer(int layerIndex) {
+        if (layerIndex < 0 || layerIndex >= layers.length) return null;
+        return layers[layerIndex].weights;
+    }
+    public double[] getActivationsForLayer(int layerIndex) {
+        if (layerIndex < 0 || layerIndex >= layers.length) return null;
+        return layers[layerIndex].activations;
+    }
 }
